@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    padding-top: 15vh;
 }
 
 /* Style for the header section */
@@ -26,16 +27,7 @@ body {
     z-index: 1000;
 }
 
-body {
-    padding-top: 15vh;
-    /* Equal to the height of the header */
-}
 
-h2 {
-    font-size: 2rem;
-    color: #8bc5bf;
-    margin: 0 0 0 240px;
-}
 
 .header h1 {
     font-size: 2em;
@@ -48,16 +40,35 @@ h2 {
     margin: 5px 0 0 0;
 }
 
-.header-link {
-    text-decoration: none; /* Remove the underline from the link */
-    color: white; /* Default text color */
+.header-link h1 {
+    margin: 0;
+    text-align: center;
+    color: #4ab0a6; /* Custom color for name */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+.header-link h1 {
+    margin: 0;
+    text-align: left;
+}
+.name-role-group {
+    display: flex;
+    flex-direction: column; /* Stack h1 and p vertically */
+    align-items: left; /* Center both h1 and p */
+}
+
+.role {
+    font-size: 1.2em;
+    color: #8bc5bf; /* Custom color for the role */
+    margin-top: 5px; /* Small gap between the name and the role */
+    text-align: left;
 }
 
 .header-link:hover h1 {
-    background-color: rgba(72, 72, 72, 0.7); /* Change the background when hovering */
+    background-color: rgba(72, 72, 72, 0.7);
     padding: 10px;
-    border-radius: 8px; /* Rounded corners for better appearance */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
 .Infomation {
@@ -86,8 +97,18 @@ h2 {
     margin-top: 10px;
 }
 
-.icons img {
+.github-icon {
+    width: 50px;
+    height: 50px;
+}  
+.facebook-icon
+{
+    width: 50px;
+    height: 50px;
+}
+.resume-icon {
     width: 55px;
+    /* Adjust size */
     height: 55px;
 }
 
@@ -101,7 +122,12 @@ h2 {
     align-items: center;
     /* Centers the cards horizontally */
 }
-
+.All-GameProject h2
+{
+    font-size: 2rem;
+    color: #4ab0a6;
+    margin: 0 0 0 -1040px;
+}
 .project-game {
     display: flex;
     flex-direction: row;
@@ -120,6 +146,24 @@ h2 {
     cursor: pointer;
     /* Show a pointer cursor to indicate it is clickable */
 }
+.project-details {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* First column for labels, second column for values */
+    gap: 10px 20px; /* Space between columns and rows */
+    align-items: center;
+    margin: 0 0;
+}
+.label {
+    text-align: left; /* Align labels to the left */
+    font-weight: bold; /* Make labels bold */
+    color: #ffffff; /* White for labels */
+}
+
+.value {
+    text-align: left; /* Align values to the left */
+    color: #ffffff; /* Custom color for values */
+}
+
 
 .image-container {
     flex-basis: 30%;
@@ -160,12 +204,12 @@ h2 {
 }
 
 .icons :hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Hover effect */
 .project-game:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     /* Slightly darker background on hover */
 }
 
@@ -176,48 +220,64 @@ a {
     /* Inherit the text color from the parent elements */
 }
 
-/* Optionally, if needed for specific icons like GitHub, you can invert colors for specific images */
-.github-icon {
-    filter: invert(1);
-    /* Only inverts colors for GitHub if desired */
-}
+
 
 .info-game {
     display: flex;
     flex-direction: column;
-    /* Stack content vertically */
-    align-items: center;
-    /* Center content horizontally */
-    justify-content: center;
-    /* Center content vertically */
+    align-items: center; /* Center everything horizontally */
+    justify-content: center; /* Center everything vertically */
     width: 60%;
-    /* Control the width of the box */
     margin: 40px auto;
-    /* Center the box horizontally on the page */
     padding: 20px;
-    /* Add space inside the box */
     border: 2px solid #8bc5bf;
-    /* Add a border to the box */
     background-color: rgba(0, 0, 0, 0.6);
-    /* Semi-transparent black background */
     border-radius: 15px;
-    /* Rounded corners */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-    color: white;
-    /* White text color */
+    color: #4ab0a6;
+}
+.info-game h2
+{
+    font-size: 1.5em; /* Slightly larger heading */
+    margin-bottom: 20px;
+    color: #4ab0a6;
+}
+.centered-group {
+    text-align: center; /* Center the text inside the group */
 }
 
-.info-game h1 {
-    font-size: 2em;
-    /* Size for the heading */
+.centered-group h2 {
+    font-size: 1.5em; /* Slightly larger heading */
     margin-bottom: 20px;
-    /* Add space below the heading */
     color: #4ab0a6;
-    /* Custom color for the heading */
-    text-align: center;
-    /* Center-align the heading */
 }
+
+.centered-group p {
+    font-size: 1.2em;
+    color: white;
+}
+
+.project-details {
+    display: grid;
+    grid-template-columns: auto auto; /* Two columns: one for labels, one for values */
+    gap: 10px 20px; /* Space between the columns and rows */
+    align-items: left; /* Vertically aligns the content */
+}
+
+.project-details p {
+    margin: 0; /* Remove any default margins */
+    font-size: 1.1em; /* Slightly larger text for better readability */
+}
+
+.project-details p strong {
+    color: #ffffff; /* Label color */
+    font-weight: bold;
+}
+
+.project-details p span {
+    color: #8bc5bf; /* Value color */
+}
+
 
 .game-image-container {
     width: 80%;
@@ -241,79 +301,79 @@ a {
     /* Add a border around the image */
 }
 
-.info-game h2 {
-    font-size: 1.5em;
-    /* Set font size for h2 */
-    color: #8bc5bf;
-    /* Custom color for subheadings */
-    margin-bottom: 10px;
-    /* Add space below subheadings */
-    text-align: left;
-    /* Align subheadings to the left */
-    width: 100%;
-    /* Make sure the h2s don't exceed the box */
-}
 
-.info-game p {
-    font-size: 1em;
-    /* Regular size for paragraphs */
-    line-height: auto;
-    /* Improve readability */
-    text-align: left;
-    /* Align text to the left */
-    width: 100%;
-    /* Ensure text doesn't exceed box width */
-    word-wrap: break-word;
-    /* Prevent text from overflowing */
-    margin-bottom: 10px;
-    /* Space between paragraphs */
-}
+
+
 /* Style for clickable learning items */
 .learning-link {
-    color: #4ab0a6; /* Default color for the link */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make the text bold */
-    transition: color 0.3s ease; /* Smooth color transition */
+    color: #4ab0a6;
+    /* Default color for the link */
+    text-decoration: none;
+    /* Remove underline */
+    font-weight: bold;
+    /* Make the text bold */
+    transition: color 0.3s ease;
+    /* Smooth color transition */
 }
 
 .learning-link:hover {
-    color: #ffb74d; /* Change to a noticeable color on hover */
-    text-decoration: underline; /* Add underline on hover */
+    color: #ffb74d;
+    /* Change to a noticeable color on hover */
+    text-decoration: underline;
+    /* Add underline on hover */
 }
 
 .github_code_link:hover {
-    color: #8bc5bf; /* Change color when hovering over the link */
+    color: #8bc5bf;
+    /* Change color when hovering over the link */
 }
 
 .github-link {
-    text-align: center; /* Centers the link */
-    margin-top: 20px; /* Adds space above the link */
+    text-align: center;
+    /* Centers the link */
+    margin-top: 20px;
+    /* Adds space above the link */
 }
 
 .github-project-link {
     /*font-size: 1.5em; /* Sets the size to be slightly larger */
-    text-decoration: none; /* Removes the underline from the link */
-    color: #4ab0a6; /* Custom color for the link */
-    font-weight: bold; /* Makes the text bold */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    text-decoration: none;
+    /* Removes the underline from the link */
+    color: #4ab0a6;
+    /* Custom color for the link */
+    font-weight: bold;
+    /* Makes the text bold */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover effect */
 }
 
 .github-project-link:hover {
-    color: #8bc5bf; /* Change color when hovering over the link */
+    color: #8bc5bf;
+    /* Change color when hovering over the link */
 }
 
 .game-video-container {
-    width: 80%; /* Constrain the width of the video container */
-    max-width: 800px; /* Maximum width for larger screens */
-    margin: 20px auto; /* Center the video container */
-    border: 2px solid #8bc5bf; /* Add a border around the video */
-    border-radius: 10px; /* Rounded corners for a polished look */
-    overflow: hidden; /* Ensures content stays inside the container */
+    width: 80%;
+    /* Constrain the width of the video container */
+    max-width: 800px;
+    /* Maximum width for larger screens */
+    margin: 20px auto;
+    /* Center the video container */
+    border: 2px solid #8bc5bf;
+    /* Add a border around the video */
+    border-radius: 10px;
+    /* Rounded corners for a polished look */
+    overflow: hidden;
+    /* Ensures content stays inside the container */
 }
 
 .game-video-container video {
-    width: 100%; /* Make the video fill the container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Removes inline spacing */
-    border-radius: 10px; /* Add rounded corners */
+    width: 100%;
+    /* Make the video fill the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Removes inline spacing */
+    border-radius: 10px;
+    /* Add rounded corners */
 }
