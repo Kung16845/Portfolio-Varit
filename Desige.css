@@ -237,12 +237,14 @@ a {
     color: #4ab0a6;
 }
 .info-game h2
-{
+{   
     font-size: 1.5em; /* Slightly larger heading */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #4ab0a6;
 }
 .centered-group {
+    margin-top: 20px;
+    width: 800px;
     text-align: center; /* Center the text inside the group */
 }
 
@@ -253,8 +255,9 @@ a {
 }
 
 .centered-group p {
-    font-size: 1.2em;
+    font-size: 1.0em;
     color: white;
+    text-align: left;
 }
 
 .project-details {
@@ -266,7 +269,7 @@ a {
 
 .project-details p {
     margin: 0; /* Remove any default margins */
-    font-size: 1.1em; /* Slightly larger text for better readability */
+    font-size: 1.0em; /* Slightly larger text for better readability */
 }
 
 .project-details p strong {
@@ -301,11 +304,20 @@ a {
     /* Add a border around the image */
 }
 
-
-
-
+.learning-list {
+    width: 800px;
+}
+.learning-list p{
+    font-size: 1.0em;
+    margin-left: -20px;
+    color: #ffffff;
+}
+.learning-link li {
+    color: #ffffff;
+}
 /* Style for clickable learning items */
 .learning-link {
+    
     color: #4ab0a6;
     /* Default color for the link */
     text-decoration: none;
