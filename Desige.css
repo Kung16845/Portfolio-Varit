@@ -306,13 +306,15 @@ a {
 
 .learning-list {
     width: 800px;
+    
 }
 .learning-list p{
     font-size: 1.0em;
-    margin-left: -20px;
+    margin-top: 5px;
     color: #ffffff;
 }
 .learning-link li {
+    
     color: #ffffff;
 }
 /* Style for clickable learning items */
@@ -389,3 +391,5 @@ a {
     border-radius: 10px;
     /* Add rounded corners */
 }
+
+
