@@ -466,7 +466,7 @@ body {
     }
 
     .project-game {
-        flex-direction: column;
+        flex-direction: column; /* Make project content stack vertically */
     }
 
     .image-container {
@@ -478,6 +478,10 @@ body {
     .game-image-container {
         width: 100%;
         max-width: none;
+    }
+
+    .project-info {
+        text-align: center; /* Center the text for a better mobile view */
     }
 }
 
@@ -497,7 +501,21 @@ body {
         height: 35px;
     }
 
+    .info-game {
+        width: 100%;
+        margin: 20px auto;
+    }
+
     .project-game {
         padding: 15px;
+    }
+
+    .project-info {
+        text-align: center;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
     }
 }
