@@ -7,6 +7,8 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     padding-top: 15vh;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Style for the header section */
@@ -224,18 +226,11 @@ a {
 
 
 .info-game {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center everything horizontally */
-    justify-content: center; /* Center everything vertically */
-    width: 60%;
-    margin: 40px auto;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; /* Center the content */
     padding: 20px;
-    border: 2px solid #8bc5bf;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    color: #4ab0a6;
+    box-sizing: border-box;
 }
 .info-game h2
 {   
@@ -263,14 +258,16 @@ a {
 
 .project-details {
     display: grid;
-    grid-template-columns: auto auto; /* Two columns: one for labels, one for values */
-    gap: 10px 20px; /* Space between the columns and rows */
-    align-items: left; /* Vertically aligns the content */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 10px 20px; /* Space between rows and columns */
+    align-items: center;
+    width: 100%;
 }
 
 .project-details p {
-    margin: 0; /* Remove any default margins */
-    font-size: 1.0em; /* Slightly larger text for better readability */
+    margin: 0;
+    font-size: 1em;
+    word-wrap: break-word; /* Break long words */
 }
 
 .project-details p strong {
@@ -437,20 +434,14 @@ body {
     box-sizing: border-box;
     transition: background-color 0.3s ease;
 }
-
-
-/* Global responsiveness adjustments for smaller screens */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
         height: auto;
         padding: 10px;
-        align-items: center; /* Center the content for smaller screens */
-    }
-
-    .name-role-group h1 {
-        font-size: 1.5em;
-        text-align: center; /* Center text on smaller screens */
+        align-items: center;
+        text-align: center;
     }
 
     .icons {
@@ -464,30 +455,23 @@ body {
     }
 
     .info-game {
-        width: 90%; /* Reduce width for better mobile display */
+        width: 90%;
         margin: 20px auto;
-        padding: 15px;
     }
 
     .project-game {
-        flex-direction: column; /* Stack project info vertically */
-        padding: 15px;
+        flex-direction: column;
+        padding: 20px;
     }
 
-    .image-container {
-        width: 100%; /* Full width on mobile */
+    .project-details {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+        gap: 10px;
+    }
+
+    .image-container img {
+        width: 100%;
         height: auto;
-        margin-bottom: 15px;
-    }
-
-    .game-image-container img, .image-container img {
-        width: 100%; /* Make images responsive */
-        height: auto;
-    }
-
-    .project-info {
-        text-align: center;
-        padding: 10px;
     }
 }
 
@@ -498,31 +482,31 @@ body {
         text-align: center;
     }
 
-    .name-role-group h1 {
-        font-size: 1.2em;
-    }
-
     .icons img {
         width: 35px;
         height: 35px;
     }
 
     .info-game {
-        width: 100%;
+        width: 95%;
         margin: 20px auto;
+        padding: 10px;
+    }
+
+    .project-details {
+        grid-template-columns: 1fr; /* Single column layout for phones */
+    }
+
+    .project-details p {
+        font-size: 0.9em; /* Slightly smaller text for mobile */
     }
 
     .project-game {
-        padding: 10px;
+        padding: 15px;
     }
 
     .image-container img {
         width: 100%;
-        height: auto;
-    }
-
-    .game-video-container iframe {
-        width: 100%; /* Make embedded videos responsive */
         height: auto;
     }
 }
