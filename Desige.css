@@ -2,11 +2,12 @@
 body {
     background-color: rgba(18, 18, 18, 0.990);
     color: white;
-    /* Ensure the text color is visible on the black background */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     padding-top: 15vh;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Style for the header section */
@@ -14,11 +15,9 @@ body {
     background-color: black;
     height: 15vh;
     display: flex;
-    justify-content: space-around;
-    /* Brings the items closer to the center */
+    justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    /* Adds some padding to the left and right */
     color: white;
     position: fixed;
     top: 0;
@@ -96,7 +95,10 @@ body {
     gap: 15px;
     margin-top: 10px;
 }
-
+.icons img {
+    width: 50px;
+    height: 50px;
+}
 .github-icon {
     width: 50px;
     height: 50px;
@@ -131,27 +133,21 @@ body {
 .project-game {
     display: flex;
     flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.600);
+    background-color: rgba(0, 0, 0, 0.6);
     border: 2px solid #8bc5bf;
     padding: 20px;
     border-radius: 10px;
     width: 100%;
-    /* Adjust this to control the card width */
     max-width: 1200px;
-    /* Sets a maximum width for large screens */
+    margin-bottom: 20px;
     box-sizing: border-box;
-    /* Ensures padding doesn't affect width */
     transition: background-color 0.3s ease;
-    /* Smooth transition for hover effect */
-    cursor: pointer;
-    /* Show a pointer cursor to indicate it is clickable */
 }
 .project-details {
     display: grid;
-    grid-template-columns: 150px 1fr; /* First column for labels, second column for values */
-    gap: 10px 20px; /* Space between columns and rows */
-    align-items: center;
-    margin: 0 0;
+    grid-template-columns: 150px 1fr;
+    gap: 10px 20px;
+    margin: 0;
 }
 .label {
     text-align: left; /* Align labels to the left */
@@ -166,11 +162,9 @@ body {
 
 
 .image-container {
-    flex-basis: 30%;
-    height: 200px;
+    width: 30%;
+    height: auto;
     margin-right: 20px;
-    border: 2px solid #8bc5bf;
-    overflow: hidden;
 }
 
 .image-container img {
@@ -391,7 +385,6 @@ a {
     border-radius: 10px;
     /* Add rounded corners */
 }
-
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     /* Flex the header for smaller screens */
