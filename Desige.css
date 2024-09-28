@@ -29,7 +29,7 @@ body {
 
 
 
-.header h1 {
+.header h1 .role{
     font-size: 2em;
     margin: 0;
     color: #4ab0a6;
@@ -54,6 +54,7 @@ body {
 .name-role-group {
     display: flex;
     flex-direction: column; /* Stack h1 and p vertically */
+    align-items: flex-start;
     align-items: left; /* Center both h1 and p */
 }
 
@@ -437,17 +438,19 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Responsive adjustments for smaller screens */
+
+/* Global responsiveness adjustments for smaller screens */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
         height: auto;
         padding: 10px;
+        align-items: center; /* Center the content for smaller screens */
     }
 
     .name-role-group h1 {
         font-size: 1.5em;
-        text-align: center;
+        text-align: center; /* Center text on smaller screens */
     }
 
     .icons {
@@ -461,27 +464,30 @@ body {
     }
 
     .info-game {
-        width: 90%;
+        width: 90%; /* Reduce width for better mobile display */
         margin: 20px auto;
+        padding: 15px;
     }
 
     .project-game {
-        flex-direction: column; /* Make project content stack vertically */
+        flex-direction: column; /* Stack project info vertically */
+        padding: 15px;
     }
 
     .image-container {
-        width: 100%;
+        width: 100%; /* Full width on mobile */
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
-    .game-image-container {
-        width: 100%;
-        max-width: none;
+    .game-image-container img, .image-container img {
+        width: 100%; /* Make images responsive */
+        height: auto;
     }
 
     .project-info {
-        text-align: center; /* Center the text for a better mobile view */
+        text-align: center;
+        padding: 10px;
     }
 }
 
@@ -507,15 +513,16 @@ body {
     }
 
     .project-game {
-        padding: 15px;
-    }
-
-    .project-info {
-        text-align: center;
+        padding: 10px;
     }
 
     .image-container img {
         width: 100%;
+        height: auto;
+    }
+
+    .game-video-container iframe {
+        width: 100%; /* Make embedded videos responsive */
         height: auto;
     }
 }
