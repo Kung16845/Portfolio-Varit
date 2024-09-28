@@ -6,8 +6,6 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     padding-top: 15vh;
-    box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Style for the header section */
@@ -15,7 +13,7 @@ body {
     background-color: black;
     height: 15vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0 50px;
     color: white;
@@ -26,40 +24,24 @@ body {
     z-index: 1000;
 }
 
-
-
-.header h1 {
-    font-size: 2em;
-    margin: 0;
-    color: #4ab0a6;
-}
-
-.header h2 {
-    font-size: 1.2em;
-    margin: 5px 0 0 0;
-}
-
-.header-link h1 {
-    margin: 0;
-    text-align: center;
-    color: #4ab0a6; /* Custom color for name */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth hover effect */
-}
 .header-link h1 {
     margin: 0;
     text-align: left;
+    color: #4ab0a6;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
+
 .name-role-group {
     display: flex;
-    flex-direction: column; /* Stack h1 and p vertically */
-    align-items: left; /* Center both h1 and p */
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .role {
     font-size: 1.2em;
-    color: #8bc5bf; /* Custom color for the role */
-    margin-top: 5px; /* Small gap between the name and the role */
+    color: #8bc5bf;
+    margin-top: 5px;
     text-align: left;
 }
 
@@ -71,7 +53,9 @@ body {
 }
 
 .Infomation {
-    margin-left: 500px;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 800px;
 }
 
 .Infomation h1 {
@@ -83,9 +67,10 @@ body {
     background-color: rgba(0, 0, 0, 0.600);
     border: 2px solid #8bc5bf;
     border-radius: 10px;
-    width: 650px;
+    width: 100%;
+    max-width: 650px;
     padding: 40px;
-    margin: 25px;
+    margin: 25px auto;
     text-align: left;
     font-size: 1.2em;
 }
@@ -95,76 +80,82 @@ body {
     gap: 15px;
     margin-top: 10px;
 }
-.icons img {
+
+.github-icon,
+.facebook-icon,
+.resume-icon {
     width: 50px;
     height: 50px;
 }
-.github-icon {
-    width: 50px;
-    height: 50px;
-}  
-.facebook-icon
-{
-    width: 50px;
-    height: 50px;
-}
+
 .resume-icon {
     width: 55px;
-    /* Adjust size */
     height: 55px;
 }
 
+/* Adjustments for .All-GameProject */
 .All-GameProject {
     display: flex;
     flex-direction: column;
-    /* Makes the cards stack vertically */
     gap: 20px;
-    /* Adds space between each card */
     margin: 20px auto;
-    align-items: center;
-    /* Centers the cards horizontally */
+    width: 100%;
+    max-width: 1200px; /* Centers the container and limits its width */
+    box-sizing: border-box;
 }
-.All-GameProject h2
-{
+
+/* Adjust .All-GameProject h2 */
+.All-GameProject h2 {
     font-size: 2rem;
     color: #4ab0a6;
-    margin: 0 0 0 -1040px;
+    margin: 0 0 0 -30px;
+    padding-left: 0;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
 }
+
+/* Adjust .project-game */
 .project-game {
     display: flex;
     flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.600);
     border: 2px solid #8bc5bf;
     padding: 20px;
     border-radius: 10px;
     width: 100%;
-    max-width: 1200px;
-    margin-bottom: 20px;
     box-sizing: border-box;
     transition: background-color 0.3s ease;
+    cursor: pointer;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 .project-details {
     display: grid;
     grid-template-columns: 150px 1fr;
     gap: 10px 20px;
+    align-items: center;
     margin: 0;
 }
+
 .label {
-    text-align: left; /* Align labels to the left */
-    font-weight: bold; /* Make labels bold */
-    color: #ffffff; /* White for labels */
+    text-align: left;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 .value {
-    text-align: left; /* Align values to the left */
-    color: #ffffff; /* Custom color for values */
+    text-align: left;
+    color: #ffffff;
 }
 
-
 .image-container {
-    width: 30%;
-    height: auto;
+    flex-basis: 30%;
+    height: 200px;
     margin-right: 20px;
+    border: 2px solid #8bc5bf;
+    overflow: hidden;
 }
 
 .image-container img {
@@ -204,24 +195,20 @@ body {
 /* Hover effect */
 .project-game:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    /* Slightly darker background on hover */
 }
 
 a {
     text-decoration: none;
-    /* Remove the underline from links */
     color: inherit;
-    /* Inherit the text color from the parent elements */
 }
-
-
 
 .info-game {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center everything horizontally */
-    justify-content: center; /* Center everything vertically */
-    width: 60%;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 800px;
     margin: 40px auto;
     padding: 20px;
     border: 2px solid #8bc5bf;
@@ -230,20 +217,22 @@ a {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     color: #4ab0a6;
 }
-.info-game h2
-{   
-    font-size: 1.5em; /* Slightly larger heading */
+
+.info-game h2 {
+    font-size: 1.5em;
     margin-bottom: 10px;
     color: #4ab0a6;
 }
+
 .centered-group {
     margin-top: 20px;
-    width: 800px;
-    text-align: center; /* Center the text inside the group */
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
 }
 
 .centered-group h2 {
-    font-size: 1.5em; /* Slightly larger heading */
+    font-size: 1.5em;
     margin-bottom: 20px;
     color: #4ab0a6;
 }
@@ -256,201 +245,157 @@ a {
 
 .project-details {
     display: grid;
-    grid-template-columns: auto auto; /* Two columns: one for labels, one for values */
-    gap: 10px 20px; /* Space between the columns and rows */
-    align-items: left; /* Vertically aligns the content */
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+    align-items: flex-start;
 }
 
 .project-details p {
-    margin: 0; /* Remove any default margins */
-    font-size: 1.0em; /* Slightly larger text for better readability */
+    margin: 0;
+    font-size: 1.0em;
 }
 
 .project-details p strong {
-    color: #ffffff; /* Label color */
+    color: #ffffff;
     font-weight: bold;
 }
 
 .project-details p span {
-    color: #8bc5bf; /* Value color */
+    color: #8bc5bf;
 }
 
-
 .game-image-container {
-    width: 80%;
-    /* Constrain the width of the image container */
+    width: 100%;
     max-width: 500px;
-    /* Maximum width for large screens */
     margin: 20px auto;
-    /* Center the image container */
 }
 
 .game-image-container img {
     width: 100%;
-    /* Ensure the image fills the container */
     height: auto;
-    /* Maintain the aspect ratio */
     display: block;
-    /* Ensure there are no extra gaps below the image */
     border-radius: 10px;
-    /* Add some rounded corners */
     border: 2px solid #8bc5bf;
-    /* Add a border around the image */
 }
 
 .learning-list {
-    width: 800px;
-    
+    width: 100%;
+    max-width: 800px;
 }
-.learning-list p{
+
+.learning-list p {
     font-size: 1.0em;
     margin-top: 5px;
     color: #ffffff;
 }
+
 .learning-link li {
-    
     color: #ffffff;
 }
+
 /* Style for clickable learning items */
 .learning-link {
-    
     color: #4ab0a6;
-    /* Default color for the link */
     text-decoration: none;
-    /* Remove underline */
     font-weight: bold;
-    /* Make the text bold */
     transition: color 0.3s ease;
-    /* Smooth color transition */
 }
 
 .learning-link:hover {
     color: #ffb74d;
-    /* Change to a noticeable color on hover */
     text-decoration: underline;
-    /* Add underline on hover */
 }
 
 .github_code_link:hover {
     color: #8bc5bf;
-    /* Change color when hovering over the link */
 }
 
 .github-link {
     text-align: center;
-    /* Centers the link */
     margin-top: 20px;
-    /* Adds space above the link */
 }
 
 .github-project-link {
-    /*font-size: 1.5em; /* Sets the size to be slightly larger */
     text-decoration: none;
-    /* Removes the underline from the link */
     color: #4ab0a6;
-    /* Custom color for the link */
     font-weight: bold;
-    /* Makes the text bold */
     transition: color 0.3s ease;
-    /* Smooth transition for hover effect */
 }
 
 .github-project-link:hover {
     color: #8bc5bf;
-    /* Change color when hovering over the link */
 }
 
 .game-video-container {
-    width: 80%;
-    /* Constrain the width of the video container */
+    width: 100%;
     max-width: 800px;
-    /* Maximum width for larger screens */
     margin: 20px auto;
-    /* Center the video container */
     border: 2px solid #8bc5bf;
-    /* Add a border around the video */
     border-radius: 10px;
-    /* Rounded corners for a polished look */
     overflow: hidden;
-    /* Ensures content stays inside the container */
 }
 
 .game-video-container video {
     width: 100%;
-    /* Make the video fill the container */
     height: auto;
-    /* Maintain aspect ratio */
     display: block;
-    /* Removes inline spacing */
     border-radius: 10px;
-    /* Add rounded corners */
 }
-/* Responsive adjustments for smaller screens */
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    /* Flex the header for smaller screens */
     .header {
         flex-direction: column;
         height: auto;
         padding: 10px;
+    }
+
+    .header .icons {
+        margin-top: 10px;
+    }
+
+    .header .name-role-group {
         align-items: center;
+    }
+
+    .header-link h1 {
         text-align: center;
     }
 
-    .icons img {
-        width: 40px;
-        height: 40px;
+    .role {
+        text-align: center;
     }
 
-    /* Adjust project layout on smaller screens */
     .project-game {
         flex-direction: column;
-        padding: 20px;
-        width: 90%;
-        margin: 0 auto 20px auto;
+        align-items: center;
     }
 
-    /* Ensure image resizes correctly */
-    .image-container img {
-        width: 100%;
-        height: auto;
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 
-    /* Single column for details */
-    .project-details {
-        grid-template-columns: 1fr;
+    .project-info {
+        flex-basis: 100%;
     }
-}
 
-/* Extra small screens (phones) */
-@media (max-width: 480px) {
-    .header {
-        padding: 5px;
+    .All-GameProject h2 {
+        font-size: 1.5rem;
         text-align: center;
+        
     }
 
-    .icons img {
-        width: 35px;
-        height: 35px;
+    .name-role-group {
+        align-items: center;
     }
 
     .info-game {
-        width: 95%;
-        margin: 20px auto;
-        padding: 10px;
+        width: 90%;
     }
 
-    .project-game {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .image-container img {
+    .centered-group,
+    .learning-list {
         width: 100%;
-        height: auto;
-    }
-
-    .project-details p {
-        font-size: 0.9em;
-        margin: 0;
     }
 }
