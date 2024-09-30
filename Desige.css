@@ -283,6 +283,7 @@ a {
 .learning-list p {
     font-size: 1.0em;
     margin-top: 5px;
+    margin-right: 15px;
     color: #ffffff;
 }
 
@@ -397,6 +398,7 @@ a {
     .centered-group,
     .learning-list {
         width: 100%;
+        
     }
 
     /* Adjust font sizes */
