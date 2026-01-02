@@ -341,6 +341,36 @@ a {
   border-radius: 10px;
 }
 
+.certificate-container {
+    display: flex;
+    flex-wrap: wrap;       /* ให้รูปตกลงมาบรรทัดใหม่เมื่อหน้าจอแคบ */
+    gap: 20px;            /* ระยะห่างระหว่างรูป */
+    justify-content: center; /* จัดให้อยู่กึ่งกลางหน้าจอ */
+    padding: 20px;
+}
+
+.certificate-item {
+    flex: 1 1 300px;      /* ขนาดเริ่มต้น 300px แต่ขยายได้ถ้ามีพื้นที่ */
+    max-width: 450px;     /* จำกัดขนาดสูงสุดไม่ให้ใหญ่เกินไปจนภาพแตก */
+    border: 1px solid #ddd;
+    border-radius: 8px;   /* ทำมุมโค้งมนดูทันสมัย */
+    overflow: hidden;     /* ตัดส่วนรูปที่เกินจากขอบโค้ง */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* เพิ่มเงาให้ดูมีมิติ */
+    transition: transform 0.3s ease; /* ใส่ Effect เวลาเอาเมาส์ไปชี้ */
+}
+
+.certificate-item:hover {
+    transform: translateY(-5px); /* ให้รูปลอยขึ้นเล็กน้อย */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.certificate-image {
+    width: 100%;          /* ให้กว้างเต็มพื้นที่ Item */
+    height: auto;         /* รักษาอัตราส่วนภาพ (Ratio) ไม่ให้ภาพเบี้ยว */
+    display: block;
+    object-fit: cover;    /* จัดการสัดส่วนภาพให้พอดี */
+}
+
 @media (max-width: 1024px) {
   .header {
     flex-direction: column;
